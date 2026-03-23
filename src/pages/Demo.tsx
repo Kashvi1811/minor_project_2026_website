@@ -11,12 +11,13 @@ const Demo = () => (
         The project includes a browser-based visualization tool that renders execution traces as interactive step-through animations. Watch registers change in real time as each instruction executes.
       </p>
       <div className="flex flex-wrap gap-3">
-        <ActionButton label="View Demo" icon={<Play className="w-4 h-4" />} />
-        <ActionButton label="Run Project" icon={<ExternalLink className="w-4 h-4" />} variant="accent" />
+        <ActionButton label="Try Visualizer" icon={<Play className="w-4 h-4" />} href="https://kashvi1811.github.io/Mini_Project_2026/" />
+        <ActionButton label="Download CLI Version" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0" />
       </div>
     </SectionCard>
 
-    <VideoEmbed title="VM Trace Visualization Demo" description="Step through a factorial program and watch the registers update in real time." />
+    <VideoEmbed title="VM Visualizer Tutorial" description="Step through a factorial program and watch the registers update in real time." src="/videos/Custom_VM_Visualizer_Tutorial.mp4" />
+    <VideoEmbed title="VM CLI Tutorial" description="A walkthrough of the CLI tool — running presets, assembling programs, and analyzing traces." src="/videos/Custom_VM_CLI_Tutorial.mp4" />
 
     <div className="grid md:grid-cols-2 gap-4">
       <SectionCard title="Features">

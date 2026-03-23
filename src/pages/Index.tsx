@@ -1,6 +1,6 @@
 import DocsLayout from "@/components/DocsLayout";
 import { PageHeader, SectionCard, CodeBlock, ActionButton, VideoEmbed } from "@/components/DocsComponents";
-import { Play, ExternalLink, BookOpen } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -15,9 +15,8 @@ const Index = () => {
           A fully functional 16-bit VM built from scratch in C++. Features a custom instruction set, assembler, trace-based debugger, and interactive visualizer.
         </p>
         <div className="flex flex-wrap gap-3 mt-6">
-          <ActionButton label="Watch Tutorial" icon={<Play className="w-4 h-4" />} />
-          <ActionButton label="View Demo" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="/demo" />
-          <ActionButton label="Get Started" icon={<BookOpen className="w-4 h-4" />} variant="secondary" />
+          <ActionButton label="Try Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/Mini_Project_2026/" />
+          <ActionButton label="Download CLI" icon={<ExternalLink className="w-4 h-4" />} variant="secondary" href="https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0" />
         </div>
       </div>
 
@@ -25,6 +24,12 @@ const Index = () => {
         title="Custom VM CLI Tutorial"
         description="A complete walkthrough of the CLI tool — running presets, assembling programs, and analyzing traces."
         src="/videos/Custom_VM_CLI_Tutorial.mp4"
+      />
+
+      <VideoEmbed
+        title="Custom VM Visualizer Tutorial"
+        description="See the browser-based trace viewer in action — step through execution and watch registers update in real time."
+        src="/videos/Custom_VM_Visualizer_Tutorial.mp4"
       />
 
       <div className="grid md:grid-cols-2 gap-4 mb-8">
