@@ -1,6 +1,6 @@
 import {
   BookOpen, Cpu, FileCode, Terminal, ArrowRightLeft,
-  BarChart3, Play, Code2, AlertTriangle, Layers
+  BarChart3, Play, Code2, AlertTriangle, Layers, GraduationCap
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
