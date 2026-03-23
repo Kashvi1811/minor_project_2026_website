@@ -83,24 +83,29 @@ export const ActionButton = ({ label, icon, variant = "primary", href }: ActionB
 interface VideoEmbedProps {
   title: string;
   description?: string;
+  src?: string;
   placeholder?: boolean;
 }
 
-export const VideoEmbed = ({ title, description, placeholder = true }: VideoEmbedProps) => (
+export const VideoEmbed = ({ title, description, src, placeholder = false }: VideoEmbedProps) => (
   <div className="my-6 bg-card border rounded-xl overflow-hidden">
-    {placeholder ? (
+    {src ? (
+      <video className="aspect-video w-full bg-muted" controls preload="metadata">
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    ) : placeholder || !src ? (
       <div className="aspect-video bg-muted flex items-center justify-center">
         <div className="text-center">
           <Play className="w-12 h-12 text-muted-foreground/40 mx-auto mb-2" />
           <p className="text-sm text-muted-foreground">Video: {title}</p>
         </div>
       </div>
-    ) : (
-      <div className="aspect-video bg-muted" />
-    )}
-    {description && (
+    ) : null}
+    {(title || description) && (
       <div className="p-4 border-t">
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <p className="text-sm font-medium mb-0.5">{title}</p>
+        {description && <p className="text-sm text-muted-foreground">{description}</p>}
       </div>
     )}
   </div>

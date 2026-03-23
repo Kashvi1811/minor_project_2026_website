@@ -21,7 +21,11 @@ const Index = () => {
         </div>
       </div>
 
-      <VideoEmbed title="Project Overview — 16-Bit VM" description="A walkthrough of the VM architecture, instruction set, and how the project fits together." />
+      <VideoEmbed
+        title="Custom VM CLI Tutorial"
+        description="A complete walkthrough of the CLI tool — running presets, assembling programs, and analyzing traces."
+        src="/videos/Custom_VM_CLI_Tutorial.mp4"
+      />
 
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <SectionCard title="🏗️ Architecture">
