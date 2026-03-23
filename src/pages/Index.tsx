@@ -1,6 +1,6 @@
 import DocsLayout from "@/components/DocsLayout";
 import { PageHeader, SectionCard, CodeBlock, ActionButton, VideoEmbed } from "@/components/DocsComponents";
-import { Play, ExternalLink, BookOpen } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
