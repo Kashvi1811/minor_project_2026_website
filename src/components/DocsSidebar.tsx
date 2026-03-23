@@ -21,6 +21,7 @@ const sections = [
   { title: "Visualization / Demo", url: "/demo", icon: Play },
   { title: "Sample Programs", url: "/samples", icon: Code2 },
   { title: "Limitations", url: "/limitations", icon: AlertTriangle },
+  { title: "Video Tutorials", url: "/tutorials", icon: GraduationCap },
 ];
 
 export function DocsSidebar() {
