@@ -13,6 +13,7 @@ import TraceAnalysis from "./pages/TraceAnalysis.tsx";
 import Demo from "./pages/Demo.tsx";
 import Samples from "./pages/Samples.tsx";
 import Limitations from "./pages/Limitations.tsx";
+import Tutorials from "./pages/Tutorials.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/demo" element={<Demo />} />
           <Route path="/samples" element={<Samples />} />
           <Route path="/limitations" element={<Limitations />} />
+          <Route path="/tutorials" element={<Tutorials />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

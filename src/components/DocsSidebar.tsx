@@ -1,6 +1,6 @@
 import {
   BookOpen, Cpu, FileCode, Terminal, ArrowRightLeft,
-  BarChart3, Play, Code2, AlertTriangle, Layers
+  BarChart3, Play, Code2, AlertTriangle, Layers, GraduationCap
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -21,6 +21,7 @@ const sections = [
   { title: "Visualization / Demo", url: "/demo", icon: Play },
   { title: "Sample Programs", url: "/samples", icon: Code2 },
   { title: "Limitations", url: "/limitations", icon: AlertTriangle },
+  { title: "Video Tutorials", url: "/tutorials", icon: GraduationCap },
 ];
 
 export function DocsSidebar() {
