@@ -13,6 +13,7 @@ import TraceAnalysis from "./pages/TraceAnalysis.tsx";
 import Demo from "./pages/Demo.tsx";
 import Samples from "./pages/Samples.tsx";
 import Limitations from "./pages/Limitations.tsx";
+import Tutorials from "./pages/Tutorials.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
