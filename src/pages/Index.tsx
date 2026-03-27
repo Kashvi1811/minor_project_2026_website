@@ -1,43 +1,64 @@
 import DocsLayout from "@/components/DocsLayout";
-import { PageHeader, SectionCard, CodeBlock, ActionButton, VideoEmbed } from "@/components/DocsComponents";
-import { ExternalLink } from "lucide-react";
+import { SectionCard, CodeBlock, ActionButton } from "@/components/DocsComponents";
+import { ExternalLink, Cpu, Terminal, BarChart3, BookOpen, Layers, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const features = [
+  { icon: Cpu, label: "16-Bit Architecture", desc: "8 registers, 64K memory, condition flags" },
+  { icon: Zap, label: "9 Custom Opcodes", desc: "ADD, SUB, MUL, AND, NOT, JZ, JMP, LOAD, HALT" },
+  { icon: Terminal, label: "CLI Tool", desc: "Menu-driven assembler & executor" },
+  { icon: BarChart3, label: "Trace Viewer", desc: "Step-through JSONL execution traces" },
+  { icon: Layers, label: "ASM → BIN Pipeline", desc: "Full assembly to binary workflow" },
+  { icon: BookOpen, label: "Video Tutorials", desc: "Guided walkthroughs for CLI & Visualizer" },
+];
 
 const Index = () => {
   const navigate = useNavigate();
 
   return (
     <DocsLayout>
-      <div className="mb-10 p-8 rounded-2xl border bg-gradient-to-br from-primary/5 via-card to-accent/5">
-        <span className="text-xs font-mono font-semibold text-primary tracking-wider uppercase">College Project</span>
-        <h1 className="text-4xl font-bold tracking-tight mt-2 mb-3">Custom 16-Bit Virtual Machine</h1>
-        <p className="text-lg text-muted-foreground max-w-2xl">
-          A fully functional 16-bit VM built from scratch in C++. Features a custom instruction set, assembler, trace-based debugger, and interactive visualizer.
-        </p>
-        <div className="flex flex-wrap gap-3 mt-6">
-          <ActionButton label="Try Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/Mini_Project_2026/" />
-          <ActionButton label="Download CLI" icon={<ExternalLink className="w-4 h-4" />} variant="secondary" href="https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0" />
+      {/* Hero */}
+      <div className="relative mb-12 p-10 rounded-2xl border bg-gradient-to-br from-primary/10 via-card to-accent/10 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.08),transparent_60%)]" />
+        <div className="relative">
+          <span className="inline-block text-[10px] font-mono font-bold tracking-[0.2em] uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
+            College Project
+          </span>
+          <h1 className="text-5xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            Custom 16-Bit<br />Virtual Machine
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+            A fully functional VM built from scratch in C++ — featuring a custom ISA, assembler, trace debugger, and interactive visualizer.
+          </p>
+          <div className="flex flex-wrap gap-3 mt-8">
+            <ActionButton label="Try Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/Mini_Project_2026/" />
+            <ActionButton label="Download CLI" icon={<ExternalLink className="w-4 h-4" />} variant="secondary" href="https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0" />
+          </div>
         </div>
       </div>
 
-      <VideoEmbed
-        title="Custom VM CLI Tutorial"
-        description="A complete walkthrough of the CLI tool — running presets, assembling programs, and analyzing traces."
-        src="/videos/Custom_VM_CLI_Tutorial.mp4"
-      />
+      {/* Features Grid */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+        {features.map(({ icon: Icon, label, desc }) => (
+          <div key={label} className="group flex items-start gap-3 p-4 rounded-xl border bg-card hover:border-primary/30 hover:shadow-md transition-all">
+            <div className="shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+              <Icon className="w-4.5 h-4.5" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold">{label}</p>
+              <p className="text-xs text-muted-foreground">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
 
-      <VideoEmbed
-        title="Custom VM Visualizer Tutorial"
-        description="See the browser-based trace viewer in action — step through execution and watch registers update in real time."
-        src="/videos/Custom_VM_Visualizer_Tutorial.mp4"
-      />
-
+      {/* Explore + Quick Start */}
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <SectionCard title="🏗️ Architecture">
           <p className="text-sm text-muted-foreground mb-3">8 general-purpose 16-bit registers, 64K memory, and condition flags (Z, N, P).</p>
           <button onClick={() => navigate("/architecture")} className="text-sm text-primary font-medium hover:underline">Learn more →</button>
         </SectionCard>
-        <SectionCard title="⚡ 9 Opcodes">
+        <SectionCard title="⚡ Opcodes">
           <p className="text-sm text-muted-foreground mb-3">HALT, ADD, AND, NOT, JZ, JMP, LOAD, MUL, SUB — a minimal but complete ISA.</p>
           <button onClick={() => navigate("/opcodes")} className="text-sm text-primary font-medium hover:underline">See all opcodes →</button>
         </SectionCard>
