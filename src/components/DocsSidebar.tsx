@@ -1,6 +1,6 @@
 import {
   BookOpen, Cpu, FileCode, Terminal, ArrowRightLeft,
-  BarChart3, Play, Code2, AlertTriangle, Layers, GraduationCap
+  BarChart3, Code2, AlertTriangle, Layers, GraduationCap
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -18,7 +18,7 @@ const sections = [
   { title: "CLI Usage", url: "/cli-usage", icon: Terminal },
   { title: "ASM → BIN Workflow", url: "/asm-bin-workflow", icon: ArrowRightLeft },
   { title: "Trace Analysis", url: "/trace-analysis", icon: BarChart3 },
-  { title: "Visualization / Demo", url: "/demo", icon: Play },
+  
   { title: "Sample Programs", url: "/samples", icon: Code2 },
   { title: "Limitations", url: "/limitations", icon: AlertTriangle },
   { title: "Video Tutorials", url: "/tutorials", icon: GraduationCap },

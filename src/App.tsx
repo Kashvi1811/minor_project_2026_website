@@ -10,7 +10,7 @@ import Opcodes from "./pages/Opcodes.tsx";
 import CliUsage from "./pages/CliUsage.tsx";
 import AsmBinWorkflow from "./pages/AsmBinWorkflow.tsx";
 import TraceAnalysis from "./pages/TraceAnalysis.tsx";
-import Demo from "./pages/Demo.tsx";
+
 import Samples from "./pages/Samples.tsx";
 import Limitations from "./pages/Limitations.tsx";
 import Tutorials from "./pages/Tutorials.tsx";
@@ -32,7 +32,7 @@ const App = () => (
           <Route path="/cli-usage" element={<CliUsage />} />
           <Route path="/asm-bin-workflow" element={<AsmBinWorkflow />} />
           <Route path="/trace-analysis" element={<TraceAnalysis />} />
-          <Route path="/demo" element={<Demo />} />
+          
           <Route path="/samples" element={<Samples />} />
           <Route path="/limitations" element={<Limitations />} />
           <Route path="/tutorials" element={<Tutorials />} />
