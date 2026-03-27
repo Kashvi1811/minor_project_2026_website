@@ -10,7 +10,7 @@ import Opcodes from "./pages/Opcodes.tsx";
 import CliUsage from "./pages/CliUsage.tsx";
 import AsmBinWorkflow from "./pages/AsmBinWorkflow.tsx";
 import TraceAnalysis from "./pages/TraceAnalysis.tsx";
-import Demo from "./pages/Demo.tsx";
+
 import Samples from "./pages/Samples.tsx";
 import Limitations from "./pages/Limitations.tsx";
 import Tutorials from "./pages/Tutorials.tsx";
