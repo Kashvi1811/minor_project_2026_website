@@ -32,7 +32,7 @@ const App = () => (
           <Route path="/cli-usage" element={<CliUsage />} />
           <Route path="/asm-bin-workflow" element={<AsmBinWorkflow />} />
           <Route path="/trace-analysis" element={<TraceAnalysis />} />
-          <Route path="/demo" element={<Demo />} />
+          
           <Route path="/samples" element={<Samples />} />
           <Route path="/limitations" element={<Limitations />} />
           <Route path="/tutorials" element={<Tutorials />} />
