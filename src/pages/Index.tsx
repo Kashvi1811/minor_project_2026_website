@@ -22,9 +22,6 @@ const Index = () => {
       <div className="relative mb-12 p-10 rounded-2xl border bg-gradient-to-br from-primary/10 via-card to-accent/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.08),transparent_60%)]" />
         <div className="relative">
-          <span className="inline-block text-[10px] font-mono font-bold tracking-[0.2em] uppercase text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
-            College Project
-          </span>
           <h1 className="text-5xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
             Custom 16-Bit<br />Virtual Machine
           </h1>
