@@ -139,15 +139,24 @@ const Tutorials = () => {
 
           {/* Video player */}
           <div className="rounded-xl overflow-hidden border bg-card shadow-sm">
-            <video
-              key={lesson.id}
-              className="aspect-video w-full bg-muted"
-              controls
-              preload="metadata"
-            >
-              <source src={lesson.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {lesson.video ? (
+              <video
+                key={lesson.id}
+                className="aspect-video w-full bg-muted"
+                controls
+                preload="metadata"
+              >
+                <source src={lesson.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <div className="aspect-video w-full bg-muted flex items-center justify-center">
+                <div className="text-center">
+                  <Play className="w-12 h-12 text-muted-foreground/40 mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">Video coming soon</p>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Lesson info */}
