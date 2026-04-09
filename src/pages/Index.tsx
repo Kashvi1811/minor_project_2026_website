@@ -1,6 +1,6 @@
 import DocsLayout from "@/components/DocsLayout";
 import { SectionCard, CodeBlock, ActionButton } from "@/components/DocsComponents";
-import { ExternalLink, Cpu, Terminal, BarChart3, BookOpen, Layers, Zap } from "lucide-react";
+import { ExternalLink, Cpu, Terminal, BarChart3, BookOpen, Layers, Zap, Activity, Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const features = [
@@ -9,6 +9,7 @@ const features = [
   { icon: Terminal, label: "CLI Tool", desc: "Menu-driven assembler & executor" },
   { icon: BarChart3, label: "Trace Viewer", desc: "Step-through JSONL execution traces" },
   { icon: Layers, label: "ASM → BIN Pipeline", desc: "Full assembly to binary workflow" },
+  { icon: Activity, label: "Process Visualizer", desc: "Interactive OS process state lifecycle simulator" },
   { icon: BookOpen, label: "Video Tutorials", desc: "Guided walkthroughs for CLI & Visualizer" },
 ];
 
@@ -70,6 +71,36 @@ const Index = () => {
           <p className="text-sm text-muted-foreground mb-3">Step-through execution trace in JSONL format with a browser-based visualization tool.</p>
           <button onClick={() => navigate("/trace-analysis")} className="text-sm text-primary font-medium hover:underline">Explore traces →</button>
         </SectionCard>
+      </div>
+
+      {/* Process Visualizer */}
+      <div className="relative mb-8 p-8 rounded-2xl border bg-gradient-to-br from-accent/10 via-card to-primary/10 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--accent)/0.08),transparent_60%)]" />
+        <div className="relative grid md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span className="inline-block text-[10px] font-mono font-bold tracking-[0.2em] uppercase text-accent-foreground bg-accent/20 px-3 py-1 rounded-full mb-4">
+              Bonus Project
+            </span>
+            <h2 className="text-2xl font-bold tracking-tight mb-3">🔄 Process State Visualizer</h2>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              An interactive tool that teaches OS process lifecycle flow — from New → Ready → Running → Waiting → Terminated. Features manual stepping, auto-run simulation, scenario-based flows, queue/lane visualization, and a color-coded CPU timeline.
+            </p>
+            <ul className="text-sm text-muted-foreground space-y-1.5 mb-5">
+              <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Custom Process Editor with visual step builder</li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Per-process CPU timeline with auto-scaled labels</li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Activity log with smart millisecond timestamps</li>
+              <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Preset scenarios & transition validation</li>
+            </ul>
+            <ActionButton label="Try Process Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/process-viewer-site/" />
+          </div>
+          <div className="aspect-video bg-muted rounded-xl border flex items-center justify-center">
+            <div className="text-center">
+              <Play className="w-12 h-12 text-muted-foreground/40 mx-auto mb-2" />
+              <p className="text-sm text-muted-foreground">Process Visualizer Tutorial</p>
+              <p className="text-xs text-muted-foreground/60">Coming soon</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <SectionCard title="Quick Start">
