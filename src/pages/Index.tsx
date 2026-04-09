@@ -32,7 +32,7 @@ const Index = () => {
             A fully functional VM built from scratch in C++ — featuring a custom ISA, assembler, trace debugger, and interactive visualizer.
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
-            <ActionButton label="Try Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/Mini_Project_2026/" />
+            <ActionButton label="Try Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/Custom-Virtual-Machine/" />
             <ActionButton label="Download CLI" icon={<ExternalLink className="w-4 h-4" />} variant="secondary" href="https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0" />
           </div>
         </div>
@@ -53,28 +53,8 @@ const Index = () => {
         ))}
       </div>
 
-      {/* Explore + Quick Start */}
-      <div className="grid md:grid-cols-2 gap-4 mb-8">
-        <SectionCard title="🏗️ Architecture">
-          <p className="text-sm text-muted-foreground mb-3">8 general-purpose 16-bit registers, 64K memory, and condition flags (Z, N, P).</p>
-          <button onClick={() => navigate("/architecture")} className="text-sm text-primary font-medium hover:underline">Learn more →</button>
-        </SectionCard>
-        <SectionCard title="⚡ Opcodes">
-          <p className="text-sm text-muted-foreground mb-3">HALT, ADD, AND, NOT, JZ, JMP, LOAD, MUL, SUB — a minimal but complete ISA.</p>
-          <button onClick={() => navigate("/opcodes")} className="text-sm text-primary font-medium hover:underline">See all opcodes →</button>
-        </SectionCard>
-        <SectionCard title="🔧 CLI Tool">
-          <p className="text-sm text-muted-foreground mb-3">Interactive menu-driven CLI for running presets, assembling files, and analyzing traces.</p>
-          <button onClick={() => navigate("/cli-usage")} className="text-sm text-primary font-medium hover:underline">CLI guide →</button>
-        </SectionCard>
-        <SectionCard title="📊 Trace Viewer">
-          <p className="text-sm text-muted-foreground mb-3">Step-through execution trace in JSONL format with a browser-based visualization tool.</p>
-          <button onClick={() => navigate("/trace-analysis")} className="text-sm text-primary font-medium hover:underline">Explore traces →</button>
-        </SectionCard>
-      </div>
-
-      {/* Process Visualizer */}
-      <div className="relative mb-8 p-8 rounded-2xl border bg-gradient-to-br from-accent/10 via-card to-primary/10 overflow-hidden">
+      {/* Process Visualizer - Prominent Section */}
+      <div className="relative mb-10 p-8 rounded-2xl border bg-gradient-to-br from-accent/10 via-card to-primary/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--accent)/0.08),transparent_60%)]" />
         <div className="relative grid md:grid-cols-2 gap-6 items-center">
           <div>
@@ -102,6 +82,27 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* Explore + Quick Start */}
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <SectionCard title="🏗️ Architecture">
+          <p className="text-sm text-muted-foreground mb-3">8 general-purpose 16-bit registers, 64K memory, and condition flags (Z, N, P).</p>
+          <button onClick={() => navigate("/architecture")} className="text-sm text-primary font-medium hover:underline">Learn more →</button>
+        </SectionCard>
+        <SectionCard title="⚡ Opcodes">
+          <p className="text-sm text-muted-foreground mb-3">HALT, ADD, AND, NOT, JZ, JMP, LOAD, MUL, SUB — a minimal but complete ISA.</p>
+          <button onClick={() => navigate("/opcodes")} className="text-sm text-primary font-medium hover:underline">See all opcodes →</button>
+        </SectionCard>
+        <SectionCard title="🔧 CLI Tool">
+          <p className="text-sm text-muted-foreground mb-3">Interactive menu-driven CLI for running presets, assembling files, and analyzing traces.</p>
+          <button onClick={() => navigate("/cli-usage")} className="text-sm text-primary font-medium hover:underline">CLI guide →</button>
+        </SectionCard>
+        <SectionCard title="📊 Trace Viewer">
+          <p className="text-sm text-muted-foreground mb-3">Step-through execution trace in JSONL format with a browser-based visualization tool.</p>
+          <button onClick={() => navigate("/trace-analysis")} className="text-sm text-primary font-medium hover:underline">Explore traces →</button>
+        </SectionCard>
+      </div>
+
 
       <SectionCard title="Quick Start">
         <p className="text-sm text-muted-foreground mb-3">Compile and run a factorial program in seconds:</p>
