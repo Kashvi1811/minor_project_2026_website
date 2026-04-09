@@ -1,6 +1,6 @@
 import { useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
-import { Play, ChevronLeft, ChevronRight, Monitor, Terminal, CheckCircle2, ExternalLink } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight, Monitor, Terminal, CheckCircle2, ExternalLink, Activity } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const lessons = [
@@ -43,7 +43,28 @@ const lessons = [
     ],
     link: {
       label: "Try Visualizer",
-      url: "https://kashvi1811.github.io/Mini_Project_2026/",
+      url: "https://kashvi1811.github.io/Custom-Virtual-Machine/",
+    },
+  },
+  {
+    id: "process-visualizer",
+    title: "Process Visualizer Tutorial",
+    subtitle: "Explore OS process lifecycle",
+    video: "",
+    description:
+      "Discover the interactive Process State Visualizer that teaches OS process lifecycle flow. Walk through process states — New, Ready, Running, Waiting, and Terminated — with manual stepping, auto-run simulation, and scenario-based flows.",
+    icon: Activity,
+    points: [
+      "Understand the 5 process states and transitions",
+      "Use manual stepping and auto-run simulation",
+      "Explore preset scenarios and custom process editor",
+      "Visualize queue/lane layouts for each state",
+      "Read the color-coded per-process CPU timeline",
+      "Track events in the Activity Log with smart timestamps",
+    ],
+    link: {
+      label: "Try Process Visualizer",
+      url: "https://kashvi1811.github.io/process-viewer-site/",
     },
   },
 ];
