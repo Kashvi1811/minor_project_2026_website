@@ -17,7 +17,7 @@ const DocsLayout = ({ children }: DocsLayoutProps) => {
               <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-mono text-xs font-bold">VM</span>
               </div>
-              <span className="font-semibold text-sm tracking-tight">16-Bit VM Docs</span>
+              <span className="font-semibold text-sm tracking-tight">16-Bit VM</span>
             </div>
           </header>
           <main className="flex-1 overflow-y-auto">
