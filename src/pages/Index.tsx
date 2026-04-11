@@ -54,9 +54,6 @@ const Index = () => {
       <div className="relative mb-10 p-8 rounded-2xl border bg-gradient-to-br from-accent/10 via-card to-primary/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--accent)/0.08),transparent_60%)]" />
         <div className="relative">
-          <span className="inline-block text-[10px] font-mono font-bold tracking-[0.2em] uppercase text-accent-foreground bg-accent/20 px-3 py-1 rounded-full mb-4">
-            Bonus Project
-          </span>
           <h2 className="text-2xl font-bold tracking-tight mb-3">🔄 Process State Visualizer</h2>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
             An interactive tool that teaches OS process lifecycle flow — from New → Ready → Running → Waiting → Terminated. Features manual stepping, auto-run simulation, scenario-based flows, queue/lane visualization, and a color-coded CPU timeline.

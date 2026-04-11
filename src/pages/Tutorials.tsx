@@ -50,7 +50,7 @@ const lessons = [
     id: "process-visualizer",
     title: "Process Visualizer Tutorial",
     subtitle: "Explore OS process lifecycle",
-    video: "",
+    video: "/videos/Process_State_Visualizer_Tutorial.mp4",
     description:
       "Discover the interactive Process State Visualizer that teaches OS process lifecycle flow. Walk through process states — New, Ready, Running, Waiting, and Terminated — with manual stepping, auto-run simulation, and scenario-based flows.",
     icon: Activity,
