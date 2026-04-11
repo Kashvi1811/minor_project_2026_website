@@ -40,7 +40,6 @@ export function DocsSidebar() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-sidebar-foreground">VM Project</p>
-                <p className="text-xs text-sidebar-foreground/60">Documentation</p>
               </div>
             </div>
           )}
