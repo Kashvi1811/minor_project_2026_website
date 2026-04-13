@@ -54,7 +54,7 @@ const Samples = () => (
       <SectionCard key={prog.name} title={prog.name} className="mb-4">
         <p className="text-sm text-muted-foreground mb-3">{prog.description}</p>
         <CodeBlock title={`${prog.name.toLowerCase()}.asm`}>{prog.code}</CodeBlock>
-        <div className="mt-3 inline-flex items-center gap-2 bg-accent/10 text-accent px-3 py-1.5 rounded-lg text-sm font-mono">
+        <div className="mt-3 inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-3 py-1.5 rounded-lg text-sm font-mono font-semibold">
           Result: {prog.result}
         </div>
       </SectionCard>
