@@ -66,7 +66,7 @@ const Index = () => {
           <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded-full mb-4 border border-accent/20">
             Interactive Tool
           </div>
-          <h2 className="text-2xl font-extrabold tracking-tight mb-3">🔄 Process State Visualizer</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight mb-3 text-primary-glow bg-primary-foreground">🔄 Process State Visualizer</h2>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4 max-w-2xl">
             An interactive tool that teaches OS process lifecycle flow — from New → Ready → Running → Waiting → Terminated. Features manual stepping, auto-run simulation, scenario-based flows, queue/lane visualization, and a color-coded CPU timeline.
           </p>
