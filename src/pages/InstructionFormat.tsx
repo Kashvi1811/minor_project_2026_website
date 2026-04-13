@@ -3,7 +3,7 @@ import { PageHeader, SectionCard, CodeBlock } from "@/components/DocsComponents"
 
 const InstructionFormat = () => (
   <DocsLayout>
-    <PageHeader title="Instruction Format" headingColor="text-accent" description="How each 16-bit instruction word is structured." />
+    <PageHeader title="Instruction Format" headingColor="text-cyan-500" description="How each 16-bit instruction word is structured." />
 
     <SectionCard title="Bit Layout">
       <p className="text-sm text-muted-foreground mb-3">Each instruction is a single 16-bit word divided into fixed fields:</p>

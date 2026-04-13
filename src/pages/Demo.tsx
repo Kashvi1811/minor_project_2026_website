@@ -4,7 +4,7 @@ import { Play, ExternalLink } from "lucide-react";
 
 const Demo = () => (
   <DocsLayout>
-    <PageHeader title="Visualization / Demo" headingColor="text-chart-5" description="See the VM in action with the browser-based trace viewer." />
+    <PageHeader title="Visualization / Demo" headingColor="text-amber-500" description="See the VM in action with the browser-based trace viewer." />
 
     <SectionCard title="Kali VM Viewer">
       <p className="text-sm text-muted-foreground mb-4">

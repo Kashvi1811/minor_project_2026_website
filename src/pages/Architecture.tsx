@@ -3,7 +3,7 @@ import { PageHeader, SectionCard, CodeBlock } from "@/components/DocsComponents"
 
 const Architecture = () => (
   <DocsLayout>
-    <PageHeader title="VM Architecture" headingColor="text-primary" description="Understanding the core components of the 16-bit virtual machine." />
+    <PageHeader title="VM Architecture" headingColor="text-indigo-500" description="Understanding the core components of the 16-bit virtual machine." />
 
     <SectionCard title="Registers">
       <p className="text-sm text-muted-foreground mb-3">The VM has <strong>8 general-purpose 16-bit registers</strong> (R0–R7). Each can hold unsigned values 0–65535.</p>

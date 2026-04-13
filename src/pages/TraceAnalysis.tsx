@@ -3,7 +3,7 @@ import { PageHeader, SectionCard, CodeBlock } from "@/components/DocsComponents"
 
 const TraceAnalysis = () => (
   <DocsLayout>
-    <PageHeader title="Trace Analysis" headingColor="text-chart-4" description="Understanding execution traces for debugging and visualization." />
+    <PageHeader title="Trace Analysis" headingColor="text-teal-500" description="Understanding execution traces for debugging and visualization." />
 
     <SectionCard title="Trace Format">
       <p className="text-sm text-muted-foreground mb-3">Each execution step is logged as a JSON line in <code className="font-mono text-primary">trace.jsonl</code>:</p>
