@@ -35,17 +35,12 @@ export const CodeBlock = ({ children, title }: CodeBlockProps) => (
 interface PageHeaderProps {
   title: string;
   description: string;
-  step?: number;
+  headingColor?: string;
 }
 
-export const PageHeader = ({ title, description, step }: PageHeaderProps) => (
+export const PageHeader = ({ title, description, headingColor }: PageHeaderProps) => (
   <div className="mb-8 animate-slide-up">
-    {step !== undefined && (
-      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full mb-3 border border-primary/20">
-        Step {step}
-      </span>
-    )}
-    <h1 className="text-3xl font-extrabold tracking-tight mb-2">{title}</h1>
+    <h1 className={`text-3xl font-extrabold tracking-tight mb-2 ${headingColor || "text-foreground"}`}>{title}</h1>
     <p className="text-muted-foreground text-lg leading-relaxed">{description}</p>
   </div>
 );

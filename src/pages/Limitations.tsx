@@ -12,7 +12,7 @@ const limitations = [
 
 const Limitations = () => (
   <DocsLayout>
-    <PageHeader step={9} title="Limitations" description="Known constraints and design trade-offs of the VM." />
+    <PageHeader title="Limitations" headingColor="text-accent" description="Known constraints and design trade-offs of the VM." />
 
     <div className="grid md:grid-cols-2 gap-4">
       {limitations.map((item) => (

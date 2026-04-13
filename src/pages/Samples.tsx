@@ -48,7 +48,7 @@ HALT`,
 
 const Samples = () => (
   <DocsLayout>
-    <PageHeader step={8} title="Sample Programs" description="Learn by example — three programs demonstrating the VM's capabilities." />
+    <PageHeader title="Sample Programs" headingColor="text-primary" description="Learn by example — three programs demonstrating the VM's capabilities." />
 
     {programs.map((prog) => (
       <SectionCard key={prog.name} title={prog.name} className="mb-4">
