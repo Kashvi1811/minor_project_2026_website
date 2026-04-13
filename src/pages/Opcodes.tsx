@@ -15,7 +15,7 @@ const opcodes = [
 
 const Opcodes = () => (
   <DocsLayout>
-    <PageHeader step={3} title="Opcodes" description="The complete instruction set — 9 operations that power the VM." />
+    <PageHeader title="Opcodes" headingColor="text-chart-1" description="The complete instruction set — 9 operations that power the VM." />
 
     <SectionCard title="Instruction Set Table">
       <div className="overflow-x-auto">

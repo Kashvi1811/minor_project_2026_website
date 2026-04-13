@@ -3,7 +3,7 @@ import { PageHeader, SectionCard, CodeBlock } from "@/components/DocsComponents"
 
 const CliUsage = () => (
   <DocsLayout>
-    <PageHeader step={4} title="CLI Usage" description="The interactive command-line interface for running and debugging programs." />
+    <PageHeader title="CLI Usage" headingColor="text-chart-2" description="The interactive command-line interface for running and debugging programs." />
 
     <SectionCard title="Basic VM (vm.cpp)">
       <p className="text-sm text-muted-foreground mb-3">The simple VM supports two preset programs via command-line arguments:</p>

@@ -3,7 +3,7 @@ import { PageHeader, SectionCard, CodeBlock } from "@/components/DocsComponents"
 
 const AsmBinWorkflow = () => (
   <DocsLayout>
-    <PageHeader step={5} title="ASM → BIN Workflow" description="From human-readable assembly to binary machine code." />
+    <PageHeader title="ASM → BIN Workflow" headingColor="text-chart-3" description="From human-readable assembly to binary machine code." />
 
     <SectionCard title="Workflow Pipeline">
       <div className="flex flex-wrap items-center gap-3 text-sm mb-4">
