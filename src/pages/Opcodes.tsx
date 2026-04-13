@@ -17,7 +17,7 @@ const Opcodes = () => (
   <DocsLayout>
     <PageHeader title="Opcodes" headingColor="text-orange-500" description="The complete instruction set — 9 operations that power the VM." />
 
-    <SectionCard title="Instruction Set Table">
+    <SectionCard title="Instruction Set Table" titleColor="text-cyan-400">
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
@@ -43,10 +43,10 @@ const Opcodes = () => (
     </SectionCard>
 
     <div className="grid md:grid-cols-2 gap-4 mt-4">
-      <SectionCard title="Arithmetic">
+      <SectionCard title="Arithmetic" titleColor="text-rose-400">
         <p className="text-sm text-muted-foreground">ADD, MUL, and SUB form the arithmetic core. ADD and MUL operate register-to-register; SUB uses an immediate value for loop counters.</p>
       </SectionCard>
-      <SectionCard title="Control Flow">
+      <SectionCard title="Control Flow" titleColor="text-teal-400">
         <p className="text-sm text-muted-foreground">JZ (conditional jump) and JMP (absolute jump) enable loops and branches. JZ checks if a register is zero; JMP sets PC directly.</p>
       </SectionCard>
     </div>

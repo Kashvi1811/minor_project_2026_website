@@ -22,9 +22,9 @@ const Limitations = () => (
       ))}
     </div>
 
-    <SectionCard title="Why These Limits?" className="mt-6">
+    <SectionCard title="Why These Limits?" className="mt-6" titleColor="text-amber-400">
       <p className="text-sm text-muted-foreground">
-        These limitations are intentional for a college project. The goal is to demonstrate core CPU concepts — fetch/decode/execute, registers, flags, branching — without the complexity of a production ISA. Each constraint is an opportunity to explain <em>why</em> real processors evolved past these limits.
+        These constraints are deliberate design choices. The goal is to demonstrate core CPU concepts — fetch/decode/execute, registers, flags, branching — in a focused, understandable environment without the complexity of a production ISA. Each limitation is an opportunity to explore <em>why</em> real processors evolved past these boundaries and what trade-offs modern architectures make.
       </p>
     </SectionCard>
   </DocsLayout>

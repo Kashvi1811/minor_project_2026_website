@@ -5,11 +5,12 @@ interface SectionCardProps {
   title: string;
   children: ReactNode;
   className?: string;
+  titleColor?: string;
 }
 
-export const SectionCard = ({ title, children, className = "" }: SectionCardProps) => (
+export const SectionCard = ({ title, children, className = "", titleColor }: SectionCardProps) => (
   <div className={`bg-card rounded-xl border p-6 shadow-sm hover-lift ${className}`}>
-    <h3 className="text-lg font-bold mb-3">{title}</h3>
+    <h3 className={`text-lg font-bold mb-3 ${titleColor || ""}`}>{title}</h3>
     {children}
   </div>
 );

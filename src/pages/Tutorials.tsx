@@ -13,7 +13,7 @@ const lessons = [
       "Learn how to compile and use the 16-bit VM CLI tool. This lesson walks you through running preset programs, assembling custom .asm files, generating execution traces, and analyzing them — all from the terminal.",
     icon: Terminal,
     points: [
-      "Compile vm.cpp and vm_cli.cpp with g++",
+      "Compile vm.cpp and vm_cli_2.cpp with g++",
       "Run built-in presets: Factorial & Fibonacci",
       "Assemble .asm source files into binary",
       "Execute binary programs and generate trace.jsonl",
