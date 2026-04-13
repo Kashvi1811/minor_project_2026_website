@@ -17,9 +17,9 @@ const InstructionFormat = () => (
     <div className="grid md:grid-cols-2 gap-4 mt-4">
       <SectionCard title="Field Descriptions">
         <ul className="text-sm text-muted-foreground space-y-2">
-          <li><code className="font-mono text-primary">OP (4 bits)</code> — Opcode identifying the operation (0–15)</li>
-          <li><code className="font-mono text-primary">Rd (3 bits)</code> — Destination register (R0–R7)</li>
-          <li><code className="font-mono text-primary">Rs (3 bits)</code> — Source register (R0–R7)</li>
+          <li><code className="font-mono text-primary">OP (4 bits)</code> — Opcode identifying the operation </li>
+          <li><code className="font-mono text-primary">Rd (3 bits)</code> — Destination register</li>
+          <li><code className="font-mono text-primary">Rs (3 bits)</code> — Source register</li>
           <li><code className="font-mono text-primary">Imm6 (6 bits)</code> — Immediate value (0–63)</li>
         </ul>
       </SectionCard>
