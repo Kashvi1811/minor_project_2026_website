@@ -19,10 +19,15 @@ const Index = () => {
   return (
     <DocsLayout>
       {/* Hero */}
-      <div className="relative mb-12 p-10 rounded-2xl border bg-gradient-to-br from-primary/10 via-card to-accent/10 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.08),transparent_60%)]" />
-        <div className="relative">
-          <h1 className="text-5xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+      <div className="relative mb-12 p-10 rounded-2xl border overflow-hidden bg-gradient-to-br from-[hsl(var(--primary)/0.06)] via-card to-[hsl(var(--primary-glow)/0.06)]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.1),transparent_60%)]" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle,hsl(var(--primary-glow)/0.08),transparent_70%)]" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[radial-gradient(circle,hsl(var(--accent)/0.06),transparent_70%)]" />
+        <div className="relative animate-slide-up">
+          <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full mb-4 border border-primary/20">
+            Open Source Project
+          </div>
+          <h1 className="text-5xl font-extrabold tracking-tight mb-4 gradient-text leading-tight">
             Custom 16-Bit<br />Virtual Machine
           </h1>
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
@@ -37,57 +42,67 @@ const Index = () => {
 
       {/* Features Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-        {features.map(({ icon: Icon, label, desc }) => (
-          <div key={label} className="group flex items-start gap-3 p-4 rounded-xl border bg-card hover:border-primary/30 hover:shadow-md transition-all">
-            <div className="shrink-0 w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-              <Icon className="w-4.5 h-4.5" />
+        {features.map(({ icon: Icon, label, desc }, i) => (
+          <div
+            key={label}
+            className="group flex items-start gap-3 p-4 rounded-xl border bg-card hover:border-primary/30 hover-lift"
+            style={{ animationDelay: `${i * 60}ms` }}
+          >
+            <div className="shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center text-primary group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-300">
+              <Icon className="w-[18px] h-[18px]" />
             </div>
             <div>
-              <p className="text-sm font-semibold">{label}</p>
-              <p className="text-xs text-muted-foreground">{desc}</p>
+              <p className="text-sm font-bold">{label}</p>
+              <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Process Visualizer - Prominent Section */}
-      <div className="relative mb-10 p-8 rounded-2xl border bg-gradient-to-br from-accent/10 via-card to-primary/10 overflow-hidden">
+      {/* Process Visualizer */}
+      <div className="relative mb-10 p-8 rounded-2xl border overflow-hidden bg-gradient-to-br from-[hsl(var(--accent)/0.06)] via-card to-[hsl(var(--primary)/0.06)]">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--accent)/0.08),transparent_60%)]" />
         <div className="relative">
-          <h2 className="text-2xl font-bold tracking-tight mb-3">🔄 Process State Visualizer</h2>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded-full mb-4 border border-accent/20">
+            Interactive Tool
+          </div>
+          <h2 className="text-2xl font-extrabold tracking-tight mb-3">🔄 Process State Visualizer</h2>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4 max-w-2xl">
             An interactive tool that teaches OS process lifecycle flow — from New → Ready → Running → Waiting → Terminated. Features manual stepping, auto-run simulation, scenario-based flows, queue/lane visualization, and a color-coded CPU timeline.
           </p>
-          <ul className="text-sm text-muted-foreground space-y-1.5 mb-5">
-            <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Custom Process Editor with visual step builder</li>
-            <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Per-process CPU timeline with auto-scaled labels</li>
-            <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Activity log with smart millisecond timestamps</li>
-            <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Preset scenarios & transition validation</li>
+          <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+            {[
+              "Custom Process Editor with visual step builder",
+              "Per-process CPU timeline with auto-scaled labels",
+              "Activity log with smart millisecond timestamps",
+              "Preset scenarios & transition validation",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
+                {item}
+              </li>
+            ))}
           </ul>
           <ActionButton label="Try Process Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/process-viewer-site/" />
         </div>
       </div>
 
-      {/* Explore + Quick Start */}
+      {/* Explore Cards */}
       <div className="grid md:grid-cols-2 gap-4 mb-8">
-        <SectionCard title="🏗️ Architecture">
-          <p className="text-sm text-muted-foreground mb-3">8 general-purpose 16-bit registers, 64K memory, and condition flags (Z, N, P).</p>
-          <button onClick={() => navigate("/architecture")} className="text-sm text-primary font-medium hover:underline">Learn more →</button>
-        </SectionCard>
-        <SectionCard title="⚡ Opcodes">
-          <p className="text-sm text-muted-foreground mb-3">HALT, ADD, AND, NOT, JZ, JMP, LOAD, MUL, SUB — a minimal but complete ISA.</p>
-          <button onClick={() => navigate("/opcodes")} className="text-sm text-primary font-medium hover:underline">See all opcodes →</button>
-        </SectionCard>
-        <SectionCard title="🔧 CLI Tool">
-          <p className="text-sm text-muted-foreground mb-3">Interactive menu-driven CLI for running presets, assembling files, and analyzing traces.</p>
-          <button onClick={() => navigate("/cli-usage")} className="text-sm text-primary font-medium hover:underline">CLI guide →</button>
-        </SectionCard>
-        <SectionCard title="📊 Trace Viewer">
-          <p className="text-sm text-muted-foreground mb-3">Step-through execution trace in JSONL format with a browser-based visualization tool.</p>
-          <button onClick={() => navigate("/trace-analysis")} className="text-sm text-primary font-medium hover:underline">Explore traces →</button>
-        </SectionCard>
+        {[
+          { title: "🏗️ Architecture", desc: "8 general-purpose 16-bit registers, 64K memory, and condition flags (Z, N, P).", link: "/architecture", cta: "Learn more →" },
+          { title: "⚡ Opcodes", desc: "HALT, ADD, AND, NOT, JZ, JMP, LOAD, MUL, SUB — a minimal but complete ISA.", link: "/opcodes", cta: "See all opcodes →" },
+          { title: "🔧 CLI Tool", desc: "Interactive menu-driven CLI for running presets, assembling files, and analyzing traces.", link: "/cli-usage", cta: "CLI guide →" },
+          { title: "📊 Trace Viewer", desc: "Step-through execution trace in JSONL format with a browser-based visualization tool.", link: "/trace-analysis", cta: "Explore traces →" },
+        ].map(({ title, desc, link, cta }) => (
+          <SectionCard key={title} title={title}>
+            <p className="text-sm text-muted-foreground mb-3">{desc}</p>
+            <button onClick={() => navigate(link)} className="text-sm text-primary font-semibold hover:underline underline-offset-4 transition-colors">
+              {cta}
+            </button>
+          </SectionCard>
+        ))}
       </div>
-
 
       <SectionCard title="Quick Start">
         <p className="text-sm text-muted-foreground mb-3">Compile and run a factorial program in seconds:</p>
