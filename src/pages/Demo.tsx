@@ -12,7 +12,7 @@ const Demo = () => (
       </p>
       <div className="flex flex-wrap gap-3">
         <ActionButton label="Try Visualizer" icon={<Play className="w-4 h-4" />} href="https://kashvi1811.github.io/Mini_Project_2026/" />
-        <ActionButton label="Download CLI Version" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0" />
+        <ActionButton label="Download CLI Version" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://github.com/Kashvi1811/Custom-Virtual-Machine/releases/tag/v2.0.0" />
       </div>
     </SectionCard>
 

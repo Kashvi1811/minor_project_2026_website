@@ -22,7 +22,7 @@ const lessons = [
     ],
     link: {
       label: "Download CLI",
-      url: "https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0",
+      url: "https://github.com/Kashvi1811/Custom-Virtual-Machine/releases/tag/v2.0.0",
     },
   },
   {
