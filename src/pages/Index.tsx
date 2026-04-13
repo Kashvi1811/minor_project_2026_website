@@ -30,7 +30,7 @@ const Index = () => {
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             <ActionButton label="Try Visualizer" icon={<ExternalLink className="w-4 h-4" />} variant="accent" href="https://kashvi1811.github.io/Custom-Virtual-Machine/" />
-            <ActionButton label="Download CLI" icon={<ExternalLink className="w-4 h-4" />} variant="secondary" href="https://github.com/Kashvi1811/Mini_Project_2026/releases/tag/v1.0.0" />
+            <ActionButton label="Download CLI" icon={<ExternalLink className="w-4 h-4" />} variant="secondary" href="https://github.com/Kashvi1811/Custom-Virtual-Machine/releases/tag/v2.0.0" />
           </div>
         </div>
       </div>
